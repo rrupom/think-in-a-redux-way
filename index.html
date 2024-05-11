@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Basic Redux</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/redux/5.0.1/redux.legacy-esm.min.js"
       integrity="sha512-3FU0fXkM+UEhdumVbtNRMp2SiXBxw9tTKYI+2RboqfO3hDxk+iZqOuTD8NNcsTpfFtaQTsKsdtlBWqFJxmH21g=="
@@ -13,7 +13,23 @@
     ></script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div id="root">
+      <div>
+        <input type="text" id="counter-1" value="0" />
+        <div>
+          <button id="btn-inc-1">Increment</button>
+          <button id="btn-dec-2">Decrement</button>
+        </div>
+      </div>
+      <br />
+      <div>
+        <input type="text" id="counter-2" value="0" />
+        <div>
+          <button id="btn-inc-2">Increment</button>
+          <button id="btn-dec-2">Decrement</button>
+        </div>
+      </div>
+    </div>
+    <script src="./src/reducer.js"></script>
   </body>
 </html>
