@@ -2,21 +2,21 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "../redux/counter/actions";
 
 const Counter = () => {
-    const count = useSelector((state) => state.value);
+    const count = useSelector((state) => state.counter.value);
     const dispatch = useDispatch();
 
-    const incrementHandler = (value) => {
-        dispatch(increment(value))
+    const incrementHandler = () => {
+        dispatch(increment())
     }
 
-    const decrementHandler = (value) => {
-        dispatch(decrement(value));
+    const decrementHandler = () => {
+        dispatch(decrement());
     }
 
     return <div>
         <p>Count: {count}</p>
-        <button onClick={() => incrementHandler(10)}>Increment</button>
-        <button onClick={() => decrementHandler(5)}>Decrement</button>
+        <button onClick={incrementHandler}>Increment</button>
+        <button onClick={decrementHandler}>Decrement</button>
     </div>
 }
 
