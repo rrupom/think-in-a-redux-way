@@ -1,3 +1,3 @@
-## Why reducers are called reducers? And a basic implementation of reducer using Array.reduce() method
+## Connect component to redux store
 
--  Actions are reduced by reducer
+## raw implementation of mapStateToProps and mapDispatchToProps
