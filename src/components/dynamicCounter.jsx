@@ -16,8 +16,8 @@ const DynamicCounter = () => {
 
     return <div>
         <p>Count : {count}</p>
-        <button onClick={() => incrementHandler(10)}>Increment</button>
-        <button onClick={() => decrementHandler(5)}>Decrement</button>
+        <button onClick={() => incrementHandler(5)}>Increment</button>
+        <button onClick={() => decrementHandler(2)}>Decrement</button>
     </div>
 }
 

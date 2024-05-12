@@ -1,1 +1,1 @@
-## Use of combineReducer() hook in redux
+## Own props with the connect API
