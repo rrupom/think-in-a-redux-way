@@ -1,3 +1,1 @@
-## Connect component to redux store
-
-## raw implementation of mapStateToProps and mapDispatchToProps
+## Use of useSelector() and useDispatch() to connect to the store and update the store
