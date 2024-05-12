@@ -1,22 +1,15 @@
-## Middleware in Redux
+## Use of redux-devtools
 
-Check [Middleware Folder](./src/redux/middlewares/) to see implementation \
-Middleware is a curry function
+- install redux-devtools-extensions
 
 ```
-// normal function
-const multiply = (a, b, c) => {
-    return a * b * c;
-}
+npm i redux-devtools-extension --force
+```
 
+- comdify createStore()
 
-// curry function
-// curry function receives only one parameter
-const curridMultiply = (a) => {
-    return (b) => {
-        return (c) => {
-            return a * b * c
-        }
-    }
-}
+```
+import { composeWithDevTools } from "redux-devtools-extension"
+
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(myLogger, logger)));
 ```
