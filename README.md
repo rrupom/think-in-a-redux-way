@@ -6,7 +6,7 @@
 npm i redux-devtools-extension --force
 ```
 
-- comdify createStore()
+- modify createStore()
 
 ```
 import { composeWithDevTools } from "redux-devtools-extension"
