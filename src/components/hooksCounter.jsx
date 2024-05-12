@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { increment, decrement } from "../redux/counter/actions";
 
-const Counter = ({ count, increment, decrement }) => {
+const HooksCounter = ({ count, increment, decrement }) => {
     return <div>
         <p>Count : {count}</p>
         <button onClick={() => increment(1)}>Increment</button>
@@ -11,7 +11,7 @@ const Counter = ({ count, increment, decrement }) => {
 
 // ownProps is the component's own props
 const mapStateToProps = (state, ownProps) => {
-    console.log(state);
+    // console.log(state);
     return {
         count: state.value
     }
@@ -24,7 +24,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(HooksCounter);
 
 /**
  * connect() -> returns a HOC component
