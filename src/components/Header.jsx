@@ -1,7 +1,7 @@
 import { useState } from "react";
-import tickImage from "../assests/images/double-tick.png";
-import noteImage from "../assests/images/notes.png";
-import plusImage from "../assests/images/plus.png";
+import tickImage from "../assets/images/double-tick.png";
+import noteImage from "../assets/images/notes.png";
+import plusImage from "../assets/images/plus.png";
 import { added, allCompleted, clearCompleted } from '../redux/todos/actions'
 import { useDispatch } from "react-redux";
 
