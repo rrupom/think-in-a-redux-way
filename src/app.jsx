@@ -1,19 +1,26 @@
-import { Provider } from "react-redux";
-import store from "./redux/store";
-import Counter from "./components/counter";
-import DynamicCounter from "./components/dynamicCounter";
-import VariableCounter from "./components/variableCounter";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar"
+import TodoList from "./components/TodoList";
 
 const App = () => {
-  return <Provider store={store}>
-    <div>
-      <h1>Simple Counter Application</h1>
-      <Counter />
-      <DynamicCounter />
-      <VariableCounter />
-      <VariableCounter dynamic />
+  return (
+    <div className="grid place-items-center bg-blue-100 h-screen px-6 font-sans">
+      <Navbar />
+
+      <div className="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white">
+        <Header />
+
+        <hr className="mt-4" />
+
+        <TodoList />
+
+        <hr className="mt-4" />
+
+        <Footer />
+      </div>
     </div>
-  </Provider>
+  )
 }
 
-export default App;    
+export default App;
