@@ -1,20 +1,10 @@
-const fetch = require("node-fetch");
 const { FETCHTODOS, TODOLOADED, TODOADDED } = require("../async-demo/actionTypes")
 
-const fetchTodosMiddleware = (store) => (next) => async (action) => {
-    if (action.type === FETCHTODOS) {
-        const response = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=5");
+const fetchAsyncMiddleware = (store) => (next) => async (action) => {
+    if (typeof action === "function") {
 
-        const todos = await response.json();
-
-        store.dispatch({
-            type: TODOLOADED,
-            payload: todos
-        })
-
-        console.log(`Number of updated todos: ${store.getState().todos.length}`);
-
-        return; // to stop further execution
+        // to stop further execution
+        return action(store.dispatch, store.getState);
     }
 
     return next(action);
@@ -36,5 +26,5 @@ const delayActionMiddleware = (store) => (next) => (action) => {
 
 module.exports = {
     delayActionMiddleware,
-    fetchTodosMiddleware
+    fetchAsyncMiddleware
 }
